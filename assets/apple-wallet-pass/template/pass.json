@@ -1,0 +1,29 @@
+{
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.type.com.fg.rgtest",
+  "teamIdentifier": "TXFUJX6BS6",
+  "webServiceURL": "https://wearefairgame.com/",
+  "authenticationToken": "vxwxd7J8AlNNFPS8k0a0FfUFtq0ewzFdc",
+  "logoText": "FAIRGAME",
+  "locations": [
+    {
+      "longitude": -0.0219457,
+      "latitude": 51.506161
+    }
+  ],
+  "organizationName": "FAIRGAME",
+  "description": "CANARY WHARF",
+  "foregroundColor": "#000000",
+  "backgroundColor": "#FFFFFF",
+  "footerImage": "https://assets-global.website-files.com/64f04bdab1cb510cfde60f4a/64f04bdab1cb510cfde61056_IMG_4198-p-1080.jpg",
+  "generic": {
+    "primaryFields": [],
+    "auxiliaryFields": [
+      {
+        "key": "loc",
+        "label": "LOCATION",
+        "value": "25-35 Fisherman's Walk, Canary Wharf, London E14 4DH"
+      }
+    ]
+  }
+}

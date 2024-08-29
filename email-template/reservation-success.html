@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Fairgame Reservation Confirmed</title>
+    <style media="all" type="text/css">
+        /* -------------------------------------
+    TYPOGRAPHY
+------------------------------------- */
+        @font-face {
+            font-family: 'Basetica';
+            src: url('https://uploads-ssl.webflow.com/64f04bdab1cb510cfde60f46/64f04bdab1cb510cfde60f81_BaseticaTrial-Regular.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Basetica Bold';
+            src: url('https://uploads-ssl.webflow.com/64f04bdab1cb510cfde60f46/64f04bdab1cb510cfde60f71_BaseticaTrial-Bold.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Basetica Bolder';
+            src: url('https://uploads-ssl.webflow.com/64f04bdab1cb510cfde60f46/64f04bdab1cb510cfde60f5e_BaseticaTrial-Black.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Basetica Bulb Yellow';
+            src: url('https://uploads-ssl.webflow.com/64f04bdab1cb510cfde60f46/64f04bdab1cb510cfde60fbb_Basetica%20Bulb%20Yellow-COLR.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Basetica Bulb Charcoal';
+            src: url('https://uploads-ssl.webflow.com/64f04bdab1cb510cfde60f46/64f04bdab1cb510cfde60fa7_Basetica%20Bulb%20Charcoal-COLR.otf') format('opentype');
+        }
+
+
+        /* -------------------------------------
+    GLOBAL RESETS
+------------------------------------- */
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            font-size: 16px;
+            line-height: 1.2;
+            text-align: center;
+            background-color: #333333;
+            color: white;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        #content {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .header-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 600px;
+            /* Set maximum width for better display on larger screens */
+        }
+
+        .img-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .img-overlay>img {
+            width: 300px;
+        }
+
+        hr {
+            background-color: black;
+            border-color: black;
+            color: black;
+        }
+
+
+        /* -------------------------------------
+    BODY & CONTAINER
+------------------------------------- */
+
+        .yellow-section {
+            background-color: #efc400;
+            color: black;
+        }
+
+        .booking-info {
+            margin: 0 auto;
+            width: 80%;
+            max-width: 450px;
+            padding: 8px 20px;
+            position: relative;
+            line-height: 1;
+        }
+
+        .booking-info>span {
+            position: absolute;
+            font-size: 22px;
+        }
+
+        .booking-info>.top-left {
+            top: 24px;
+            left: 24px;
+        }
+
+        .booking-info>.top-right {
+            top: 24px;
+            right: 24px;
+        }
+
+        .booking-info>.bottom-left {
+            bottom: 24px;
+            left: 24px;
+        }
+
+        .booking-info>.bottom-right {
+            bottom: 24px;
+            right: 24px;
+        }
+
+        .booking-info>.booking-datetime {
+            background-color: #ebce54;
+            padding: 12px 8px;
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        .booking-datetime>#booking-date {
+            font-size: 18px;
+        }
+
+        .booking-info>.booking-package>.booking-package-details {
+            line-height: 1.5;
+        }
+
+        .guide-steps {
+            clip-path: polygon(0 50px, 100% 0%, 100% calc(100%), 0% 100%);
+            margin: 0 auto;
+            max-width: 600px;
+            margin-top: 100px;
+        }
+
+        #pink-teddy {
+            position: absolute;
+            height: 150px;
+            z-index: 1;
+            left: 16px;
+            margin-top: 35px;
+        }
+
+        .guide-steps ol {
+            max-width: 280px;
+            counter-reset: my-counter;
+            list-style: none;
+            padding-top: 100px;
+            padding-bottom: 40px;
+            padding-left: 0px;
+            margin: 0 auto;
+        }
+
+        .guide-steps ol li {
+            margin: 0 0 0.5rem 0;
+            counter-increment: my-counter;
+            position: relative;
+            margin-bottom: 32px;
+        }
+
+        .guide-steps ol li::before {
+            content: counter(my-counter);
+            color: #efc400;
+            font-family: 'Basetica Bulb Yellow', sans-serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            position: absolute;
+            --size: 50px;
+            left: calc(-1 * var(--size) + 10px);
+            line-height: var(--size);
+            width: 35px;
+            height: var(--size);
+            top: 0;
+            transform: rotate(-10deg);
+            background: #303030;
+            border-radius: 5%;
+            text-align: center;
+            box-shadow: 1px 1px 0 #999;
+        }
+
+        .guide-steps ol li:nth-child(odd):before {
+            transform: rotate(10deg);
+        }
+
+        .guide-steps .step .step-title {
+            font-size: 28px;
+        }
+
+        #canes-img {
+            width: 125px;
+        }
+
+        #map-img {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        #qr-img {
+            width: 200px;
+            height: 200px;
+        }
+
+        #duck-footer-img {
+            width: 80px;
+        }
+
+        .what-purchased {
+            max-width: 350px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        /* -------------------------------------
+    HEADER, FOOTER, MAIN
+------------------------------------- */
+        body {
+            font-family: 'Basetica', sans-serif;
+            font-size: 18px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        b {
+            font-family: 'Basetica Bolder', sans-serif;
+        }
+
+        a {
+            color: #ff94b2;
+            text-decoration: underline;
+        }
+
+        a#manage-reservation {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .black-bulb {
+            font-family: 'Basetica Bulb Charcoal', sans-serif;
+            font-size: 22px;
+        }
+
+        .payment-details {
+            width: 80%;
+            margin: 0 auto;
+            text-align: left;
+            max-width: 450px;
+        }
+
+        .payment-details-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .payment-details-table .payment-price {
+            text-align: right;
+        }
+
+        .payment-details-table tr.total-row {
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+        }
+
+        .payment-details-table tr.total-row td {
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        .payment-details-table tr.total-row small {
+            font-size: 12px;
+        }
+
+        .payment-details-table tr.table-spacer {
+            height: 12px;
+        }
+
+        .address {
+            text-align: left;
+            font-weight: bold;
+            clip-path: polygon(0 50px, 100% 0%, 100% calc(100%), 0% 100%);
+            padding-top: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .address-container {
+            padding: 10%;
+        }
+
+        .when-you-arrive {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .when-you-arrive-container {
+            padding: 10%;
+        }
+
+        .need-to-change {
+            text-align: left;
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .need-to-change-container {
+            padding: 10%;
+        }
+
+        /* -------------------------------------
+    BUTTONS
+------------------------------------- */
+
+        .btn {
+            border: none;
+            background-color: white;
+            color: black;
+            text-align: center;
+            border-radius: 4rem;
+            padding: 10px 16px;
+            font-family: 'Basetica Bold', sans-serif;
+            font-size: 25px;
+            width: 100%;
+            text-decoration: none;
+            transition: color .2s cubic-bezier(.25, .46, .45, .94), background-color .2s cubic-bezier(.25, .46, .45, .94);
+        }
+
+        .btn a {
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            text-align: center;
+            border-radius: 4rem;
+            padding: 10px 16px;
+            font-size: .9375rem;
+            text-decoration: none;
+            transition: color .2s cubic-bezier(.25, .46, .45, .94), background-color .2s cubic-bezier(.25, .46, .45, .94);
+        }
+
+        #apple-wallet>img {
+            width: 135px;
+            height: 50px;
+        }
+
+        #google-wallet>img {
+            width: 135px;
+            height: 50px;
+        }
+
+        /* -------------------------------------
+    OTHER STYLES THAT MIGHT BE USEFUL
+------------------------------------- */
+
+        .last {
+            margin-bottom: 0;
+        }
+
+        .first {
+            margin-top: 0;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .text-link {
+            color: #ff94b2 !important;
+            text-decoration: underline !important;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .mt0 {
+            margin-top: 0;
+        }
+
+        .mb0 {
+            margin-bottom: 0;
+        }
+
+        /* -------------------------------------
+    RESPONSIVE AND MOBILE FRIENDLY STYLES
+------------------------------------- */
+
+        @media only screen and (max-width: 640px) {
+
+            .content {
+                padding: 0 !important;
+            }
+
+            .container {
+                padding: 0 !important;
+                padding-top: 8px !important;
+                width: 100% !important;
+            }
+
+            .btn a {
+                font-size: 16px !important;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <!-- Section 1: Image with text header -->
+        <section class="header-section">
+            <div class="header-container">
+                <img src="https://assets-global.website-files.com/64f04bdab1cb510cfde60f4a/64f04bdab1cb510cfde61056_IMG_4198-p-1080.jpg"
+                    alt="Header Image" class="header-image">
+                <div class="img-overlay">
+                    <img
+                        src="https://assets-global.website-files.com/64f04bdab1cb510cfde60f46/64f04bdab1cb510cfde60f86_Revised%20FG%20logo_WHT.svg" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Welcome message -->
+        <section>
+            <article>
+                <p>Hi Christopher, great news!</p>
+            </article>
+        </section>
+
+        <!-- Section 3: Booking confirmed -->
+        <section>
+            <div class="booking-info yellow-section">
+                <span class="top-left">★</span>
+                <span class="top-right">★</span>
+                <span class="bottom-left">★</span>
+                <span class="bottom-right">★</span>
+                <h2 class="black-bulb">BOOKING CONFIRMED</h2>
+                <hr />
+                <div class="booking-datetime">
+                    <b id="booking-date">Monday 28th September 2024</b>
+                    <p>Arrival Time: 11:45am&nbsp;&nbsp;|&nbsp;&nbsp;Game Time: 12:15am</p>
+                </div>
+
+                <div class="booking-package">
+                    <h2><b>Your Package</b></h2>
+                    <div class="booking-package-details">
+                        <p>Game Tickets: <b>5</b>
+                            <br />Food Tokens: <b>4</b>
+                            <br />Drink Tokens: <b>5</b>
+                        </p>
+                    </div>
+                </div>
+                <hr />
+                <p>Reservation ID: <b>Y5YFHFHEJ</b></p>
+            </div>
+        </section>
+
+        <img src="https://assets-global.website-files.com/64f04bdab1cb510cfde60f46/64f04bdab1cb510cfde60fd5_bear-game.svg"
+            id="pink-teddy" />
+
+        <!-- Section 4: steps -->
+        <section>
+            <div class="guide-steps yellow-section">
+                <ol>
+                    <li>
+                        <div class="step">
+                            <b class="step-title">Add To Wallet</b>
+                            <p>You can now add your tickets to your wallet, so you'll know exactly where to find it when
+                                you
+                                arrive!</p>
+                            <div class="wallet-buttons">
+                                <span id="apple-wallet">
+                                    <img
+                                        src="http://ec2-54-75-165-115.eu-west-1.compute.amazonaws.com:3000/assets/images/add_to_apple_wallet-badge.svg" />
+                                </span>
+                                <span id="google-wallet">
+                                    <img
+                                        src="http://ec2-54-75-165-115.eu-west-1.compute.amazonaws.com:3000/assets/images/add_to_google_wallet-badge.svg" />
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step">
+                            <b class="step-title">Create Leaderboard</b>
+                            <p>Add your guests and a group name ~ the more memorable the better! <br />
+                                Tip: complete before you arrive to get straight into the action!
+                            </p>
+                            <button class="btn">Create Leaderboard</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step">
+                            <b class="step-title">Get Sharing</b>
+                            <p>Share an invite with your group so they can easily check-in on the day<br />
+                                (even if they arrive before you!).
+                            </p>
+                            <button class="btn">Share Invite</button>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Section 5: Payment details -->
+        <section>
+            <div class="payment-details">
+                <h2><b>Payment Details</b></h2>
+                <table class="payment-details-table">
+                    <tbody>
+                        <tr>
+                            <td class="payment-item">Games</td>
+                            <td class="payment-price">£75.00</td>
+                        </tr>
+                        <tr>
+                            <td class="payment-item">Food & Drink</td>
+                            <td class="payment-price">£120.00</td>
+                        </tr>
+                        <tr class="table-spacer"></tr>
+                        <tr class="total-row">
+                            <td class="payment-item"><b>Total</b> <br /><small>VAT included in price</small></td>
+                            <td class="payment-price"><b>£195.00</b></td>
+                        </tr>
+                        <tr class="table-spacer"></tr>
+                        <tr>
+                            <td class="payment-item">Paid with <span id="card-icon"><img /></span>**** 4242</td>
+                            <td class="payment-price">£195.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <p class="align-center"><a href="[Receipt Link]">Link To Receipt</a></p>
+
+                <div class="what-purchased mt-3 align-center">
+                    <h2><b>What You've Purchased</b></h2>
+                    <p>1x game ticket gets you 9 game credits (1 for each game).</p>
+                    <p>Game credits are applied to the games card you'll receive from our kiosks.</p>
+                    <p>★</p>
+                    <p>1x food token gets you 1 main food item from our token menu from any of our food vendors.</p>
+                    <p>★</p>
+                    <p>1x drink token gets you 1 drink from our token menu at any of our bars.</p>
+                    <br />
+                    <img src="https://assets-global.website-files.com/64f04bdab1cb510cfde60f46/64f04bdab1cb510cfde60fd3_can-game.svg"
+                        id="canes-img" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Event address -->
+        <section>
+            <div class="address yellow-section">
+                <div class="address-container">
+                    <h2><b>HOW TO FIND US</b></h2>
+                    <p>25-35 Fisherman's Walk
+                        <br />Canary Wharf
+                        <br />London
+                        <br />E14 4DH
+                    </p>
+                    <p>TEL: 020 4599 3666</p>
+                    <img src="https://assets-global.website-files.com/64f04bdab1cb510cfde60f46/64f04bdab1cb510cfde60fdd_FG_Map.png"
+                        id="map-img" alt="Map Image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Arrival instructions -->
+        <section>
+            <div class="when-you-arrive">
+                <div class="when-you-arrive-container">
+                    <h2><b>When You Arrive</b></h2>
+                    <p>If you haven't downloaded the ticket to your wallet, you can scan the QR code below at one of our
+                        kiosks
+                        to check-in.</p>
+                    <p>Alternatively you can use the Reservation ID.</p>
+                    <img src="http://ec2-54-75-165-115.eu-west-1.compute.amazonaws.com:3000/api/v1/bookings/AB3BP3S/qr-code"
+                        alt="QR Code" id="qr-img">
+                    <br />
+                    <p>Reservation ID: <b>Y5YFHFHEJ</b></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Footer -->
+        <footer>
+            <div class="need-to-change yellow-section">
+                <div class="need-to-change-container">
+                    <h2><b>Need To Change?</b></h2>
+                    <p>You can cancel a reservation and review our FAQ's by following the link below.</p>
+                    <a id="manage-reservation">Manage Reservation</a>
+                    <br />
+                    <h2><b>Age Policy</b></h2>
+                    <p>Fairgame is an adult-only venue. You must be 18+ to experience a ride like this one.</p>
+                    <div class="footer-img-container align-center">
+                        <img src="https://assets-global.website-files.com/64f04bdab1cb510cfde60f46/64f04bdab1cb510cfde60f73_scroll-duck.svg"
+                            alt="duck-image" id="duck-footer-img" />
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

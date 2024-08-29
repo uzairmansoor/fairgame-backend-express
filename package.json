@@ -1,0 +1,34 @@
+{
+  "name": "fairgame-backend",
+  "version": "1.0.0",
+  "description": "Wrapper for Fairgame Core API and configurations for frontend apps",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node src/index.js",
+    "dev": "NODE_ENV=development nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gbmobitech@bitbucket.org/gwdmedia/fairgame-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/gwdmedia/fairgame-backend/issues"
+  },
+  "homepage": "https://bitbucket.org/gwdmedia/fairgame-backend#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.3",
+    "@walletpass/pass-js": "^6.9.1",
+    "axios": "^1.6.2",
+    "connect-history-api-fallback": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "google-auth-library": "^9.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.29.4",
+    "morgan": "^1.10.0",
+    "qrcode": "^1.5.3"
+  }
+}
